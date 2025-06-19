@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zarrar's Khan Institute</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Zarrar's Khan Institute</h1>
+    <p>Building Futures in Computer Science, Software Engineering & AI</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#departments">Departments</a>
+      <a href="#admission">Admission</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about" class="intro">
+    <h2>Welcome to Zarrar's Khan Institute</h2>
+    <p>At Zarrar's Khan Institute, we are committed to nurturing innovation, knowledge, and leadership in the fields of Computer Science, Software Engineering, and Artificial Intelligence. Our undergraduate programs offer hands-on experience, industry exposure, and academic excellence to empower the tech leaders of tomorrow.</p>
+  </section>
+
+  <section id="departments">
+    <h2>Our Departments</h2>
+    <div class="department-grid">
+      <div class="card">
+        <h3>BS Computer Science (CS)</h3>
+        <p>Explore programming, data science, and computing systems for a solid tech foundation.</p>
+      </div>
+      <div class="card">
+        <h3>BS Software Engineering (SE)</h3>
+        <p>Design and develop scalable software systems with engineering best practices.</p>
+      </div>
+      <div class="card">
+        <h3>BS Artificial Intelligence (AI)</h3>
+        <p>Dive into machine learning, robotics, and deep learning with real-world applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="admission">
+    <h2>Apply for Admission</h2>
+    <form id="admissionForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="department">Select Department</label>
+      <select id="department" name="department" required>
+        <option value="">--Select--</option>
+        <option value="CS">Computer Science</option>
+        <option value="SE">Software Engineering</option>
+        <option value="AI">Artificial Intelligence</option>
+      </select>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <button type="submit">Submit Application</button>
+    </form>
+
+    <div id="successMessage" class="hidden">Your application has been submitted successfully!</div>
+  </section>
+
+  <footer id="contact">
+    <h2>Contact Information</h2>
+    <p>Email: <a href="mailto:zarrarkhan617@gmail.com">zarrarkhan617@gmail.com</a></p>
+    <p>Phone: <a href="tel:+923125558185">0312-5558185</a></p>
+    <p>© 2025 Zarrar’s Khan Institute. All rights reserved.</p>
+  </footer>
+
+  <!-- Success message logic -->
+  <script>
+    const form = document.getElementById("admissionForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      form.reset();
+      successMessage.classList.remove("hidden");
+      setTimeout(() => successMessage.classList.add("hidden"), 5000);
+    });
+  </script>
+</body>
+</html>
